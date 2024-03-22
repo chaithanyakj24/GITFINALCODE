@@ -1,0 +1,124 @@
+git clone https://github.com/chaithanyakj24/GIT1.git
+cd GIT1
+touch create.txt
+touch created.txt
+git add .
+git commit -m "initial commit"
+git push
+
+______________________________________________________________________________
+
+
+git clone https://github.com/chaithanyakj24/GIT2.git
+cd GIT2
+touch one.txt
+git add .
+git commit -m "Initial commit"
+git push
+git checkout -b feature-branch
+touch a.txt
+git add .
+git commit -m "second commit"
+git push origin feature-branch
+git checkout main
+git merge feature-branch
+git branch --merged
+
+
+(main)
+touch b.txt
+git add .
+touch c.txt
+git add .
+git stash
+git checkout feature-branch
+git stash apply
+git commit -m "branch commit"
+git checkout main
+git stash pop
+branch main
+git push origin feature-branch
+
+______________________________________________________________________________
+
+git clone https://github.com/chaithanyakj24/GIT3.git
+cd GIT3
+touch one.txt
+git add .
+git push
+git checkout -b feature-branch
+git remote -v
+git fetch origin
+git rebase origin/main
+touch three.txt
+git add .
+git commit -m "second commit"
+git push origin feature-branch
+git checkout main
+git rebase feature-branch
+Successfully rebased and updated refs/heads/main.
+
+__________________________________________________________________________________
+
+git clone https://github.com/chaithanyakj24/GIT4.git
+cd GIT4
+touch one.txt
+git add .
+git commit -m "first commit"
+git add .
+git commit -m "second commit"
+git push
+git log
+git tag v1.0 fc738ef1972c3dd575f6c36575697b279b80e3e7
+git tag
+git push origin v1.0
+git tag --contain  fc738ef1972c3dd575f6c36575697b279b80e3e7
+v1.0
+_____________________________________________________________________________________
+
+git clone https://github.com/chaithanyakj24/GIT5.git
+cd GIT5
+git init
+git one.txt
+touch one.txt
+git add .
+git commit -m "first commit"
+git push
+git checkout -b source-branch
+touch two.txt
+git add .
+git commit -m "second commit"
+touch three.txt
+git add .
+git commit -m "third commit"
+git push origin source-branch
+git log
+git checkout main
+git cherry-pick 9769d1eae0d7052e9bf66c52fb83eab7c52a2d39
+git push
+
+_______________________________________________________________________
+
+git clone https://github.com/chaithanyakj24/GIT6.git
+cd GIT6
+touch one.txt
+git add .
+git commit -m "first commit"
+touch two.txt
+git add .
+git commit -m "second commit"
+git push
+git log
+git log --author="chaithanyakj24" --since="2024-01-01" --until="2024-12-31"
+git log -n 5
+
+git revert a63bd44da34729bdebec81fcb36e0601ac438850
+[main 9226149] Revert "second commit"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 two.txt
+
+
+
+
+
+
